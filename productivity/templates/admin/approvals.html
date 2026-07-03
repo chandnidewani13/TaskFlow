@@ -1,0 +1,124 @@
+{% extends 'base/admin_base.html' %}
+
+{% block content %}
+
+<h1 class="mb-4">
+
+Approval Requests
+
+</h1>
+
+<div class="card p-4">
+
+<table class="table table-hover">
+
+<thead>
+
+<tr>
+
+<th>
+
+Request Type
+
+</th>
+
+<th>
+
+Requested By
+
+</th>
+
+<th>
+
+Role
+
+</th>
+
+<th>
+
+Status
+
+</th>
+
+<th>
+
+Actions
+
+</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+{% for task in pending_tasks %}
+
+<tr>
+
+<td>
+
+Task Assignment
+
+</td>
+
+<td>
+
+{{ task.assigned_to }}
+
+</td>
+
+<td>
+
+Employee
+
+</td>
+
+<td>
+
+<span class="badge bg-warning">
+
+Pending
+
+</span>
+
+</td>
+
+<td>
+
+<button class="btn btn-success btn-sm">
+
+Approve
+
+</button>
+
+<button class="btn btn-danger btn-sm">
+
+Reject
+
+</button>
+
+</td>
+
+</tr>
+
+{% empty %}
+
+<tr>
+
+<td colspan="5" class="text-center">
+
+No Pending Requests
+
+</td>
+
+</tr>
+
+{% endfor %}
+
+</tbody>
+</table>
+
+</div>
+
+{% endblock %}

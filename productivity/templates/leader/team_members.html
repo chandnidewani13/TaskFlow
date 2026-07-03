@@ -1,0 +1,102 @@
+{% extends 'base/leader_base.html' %}
+
+{% block content %}
+
+<h1 class="mb-4">
+
+Team Members
+
+</h1>
+
+<div class="card p-4">
+<div class="card dashboard-card mb-4">
+
+<h5>Total Team Members</h5>
+
+<h2>{{ members.count }}</h2>
+
+</div>
+
+<table class="table table-hover">
+
+<thead>
+
+<tr>
+
+<th>Name</th>
+
+<th>Email</th>
+
+<th>Role</th>
+
+<th>Skill</th>
+
+<th>Status</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+{% for member in members %}
+
+<tr>
+
+<td>
+
+{{ member.name }}
+
+</td>
+
+<td>
+
+{{ member.email }}
+
+</td>
+
+<td>
+
+{{ member.role }}
+
+</td>
+
+<td>
+
+{{ member.skill }}
+
+</td>
+
+<td>
+
+<span class="badge bg-success">
+
+Active
+
+</span>
+
+</td>
+
+</tr>
+
+{% empty %}
+
+<tr>
+
+<td colspan="5" class="text-center">
+
+No Team Members Found
+
+</td>
+
+</tr>
+
+{% endfor %}
+
+</tbody>
+
+</table>
+
+</div>
+
+{% endblock %}

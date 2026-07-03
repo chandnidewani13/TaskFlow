@@ -1,0 +1,33 @@
+{% extends 'base/admin_base.html' %}
+
+{% block content %}
+
+<h1 class="mb-4">
+
+Admin Notifications
+
+</h1>
+
+<div class="card p-4">
+
+{% for notification in notifications %}
+
+<div class="alert alert-primary">
+
+{{ notification }}
+
+</div>
+
+{% empty %}
+
+<div class="alert alert-secondary">
+
+No Notifications
+
+</div>
+
+{% endfor %}
+
+</div>
+
+{% endblock %}

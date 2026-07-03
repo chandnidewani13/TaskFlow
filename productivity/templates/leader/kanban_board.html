@@ -1,0 +1,213 @@
+{% extends 'base/leader_base.html' %}
+
+{% block content %}
+
+<h1 class="mb-4">
+
+Team Kanban Board
+
+</h1>
+
+<div class="row">
+
+<!-- PENDING -->
+
+<div class="col-md-4">
+
+<div class="card p-3 kanban-column">
+
+<h3 class="text-center mb-4">
+
+To Do
+
+</h3>
+
+{% for task in pending_tasks %}
+
+<div class="task-card p-3 mb-3">
+
+<h5>
+
+{{ task.title }}
+
+</h5>
+
+<p>
+
+Deadline:
+<b>
+
+{{ task.deadline }}
+
+</b>
+
+</p>
+
+<p>
+
+Assigned:
+<b>
+
+{{ task.assigned_to }}
+
+</b>
+
+</p>
+
+<span class="badge bg-danger">
+
+{{ task.priority }}
+
+</span>
+
+</div>
+
+{% empty %}
+
+<p>
+
+No Pending Tasks
+
+</p>
+
+{% endfor %}
+
+</div>
+
+</div>
+
+<!-- IN PROGRESS -->
+
+<div class="col-md-4">
+
+<div class="card p-3 kanban-column">
+
+<h3 class="text-center mb-4">
+
+In Progress
+
+</h3>
+
+{% for task in progress_tasks %}
+
+<div class="task-card p-3 mb-3">
+
+<h5>
+
+{{ task.title }}
+
+</h5>
+
+<p>
+
+Deadline:
+<b>
+
+{{ task.deadline }}
+
+</b>
+
+</p>
+
+<p>
+
+Assigned:
+<b>
+
+{{ task.assigned_to }}
+
+</b>
+
+</p>
+
+<span class="badge bg-warning text-dark">
+
+{{ task.priority }}
+
+</span>
+
+</div>
+
+{% empty %}
+
+<p>
+
+No Tasks In Progress
+
+</p>
+
+{% endfor %}
+
+</div>
+
+</div>
+
+<!-- COMPLETED -->
+
+<div class="col-md-4">
+
+<div class="card p-3 kanban-column">
+
+<h3 class="text-center mb-4">
+
+Completed
+
+</h3>
+
+{% for task in completed_tasks %}
+
+<div class="task-card p-3 mb-3">
+
+<h5>
+
+{{ task.title }}
+
+</h5>
+
+<p>
+
+Deadline:
+<b>
+
+{{ task.deadline }}
+
+</b>
+
+</p>
+
+<p>
+
+Assigned:
+<b>
+
+{{ task.assigned_to }}
+
+</b>
+
+</p>
+
+<span class="badge bg-success">
+
+{{ task.priority }}
+
+</span>
+
+</div>
+
+{% empty %}
+
+<p>
+
+No Completed Tasks
+
+</p>
+
+{% endfor %}
+
+</div>
+
+</div>
+
+</div>
+
+{% endblock %}

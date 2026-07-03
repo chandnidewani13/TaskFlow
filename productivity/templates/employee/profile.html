@@ -1,0 +1,74 @@
+{% extends 'base/employee_base.html' %}
+
+{% block content %}
+
+<h1 class="mb-4">
+
+My Profile
+
+</h1>
+
+<div class="card p-5">
+
+<div class="text-center">
+
+<img
+src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+width="120"
+class="mb-4">
+
+<h3>
+
+{{ employee.name }}
+
+</h3>
+
+<p>
+
+{{ employee.skill }}
+
+</p>
+
+</div>
+
+<hr>
+
+<div class="row mt-4">
+
+<div class="col-md-6">
+
+<h5>
+
+Email
+
+</h5>
+
+<p>
+
+{{ employee.email }}
+
+</p>
+
+</div>
+
+<div class="col-md-6">
+
+<h5>
+
+Role
+
+</h5>
+
+<p>
+
+{{ employee.role }}
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+{% endblock %}

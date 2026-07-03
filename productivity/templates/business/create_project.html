@@ -1,0 +1,113 @@
+{% extends 'base/business_base.html' %}
+
+{% block content %}
+
+<div class="container-fluid">
+
+    <h1 class="mb-4">
+        Create Project
+    </h1>
+
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-success">
+                {{ message }}
+
+            <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="alert">
+            </button>
+            </div>
+        {% endfor %}
+    {% endif %}
+
+    <div class="card shadow p-4">
+
+        <form method="POST">
+
+            {% csrf_token %}
+
+            <div class="mb-3">
+
+                <label class="form-label">
+                    Project Title
+                </label>
+
+                <input
+                    type="text"
+                    name="title"
+                    class="form-control"
+                    required>
+
+            </div>
+
+            <div class="mb-3">
+
+                <label class="form-label">
+                    Description
+                </label>
+
+                <textarea
+                    name="description"
+                    class="form-control"
+                    rows="4"
+                    required></textarea>
+
+            </div>
+
+            <div class="mb-3">
+
+                <label class="form-label">
+                    Deadline
+                </label>
+
+                <input
+                    type="date"
+                    name="deadline"
+                    class="form-control"
+                    required>
+
+            </div>
+
+            <div class="mb-3">
+
+                <label class="form-label">
+                    Priority
+                </label>
+
+                <select
+                    name="priority"
+                    class="form-select">
+
+                    <option value="High">
+                        High
+                    </option>
+
+                    <option value="Medium">
+                        Medium
+                    </option>
+
+                    <option value="Low">
+                        Low
+                    </option>
+
+                </select>
+
+            </div>
+
+            <button
+                type="submit"
+                class="btn btn-primary">
+
+                Create Project
+
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+{% endblock %}

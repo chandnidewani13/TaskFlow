@@ -1,0 +1,138 @@
+{% extends 'base/leader_base.html' %}
+
+{% block content %}
+
+<h1 class="mb-4">
+
+Team Leader Dashboard
+</h1>
+
+<div class="row">
+
+<div class="col-md-4">
+
+<div class="card dashboard-card">
+
+<h5>
+
+Projects
+
+</h5>
+
+<h2>
+
+{{ total_projects }}
+
+</h2>
+
+</div>
+
+</div>
+
+<div class="col-md-4">
+
+<div class="card dashboard-card">
+
+<h5>
+
+Total Tasks
+
+</h5>
+
+<h2>
+
+{{ total_tasks }}
+
+</h2>
+
+</div>
+
+</div>
+
+<div class="col-md-4">
+
+<div class="card dashboard-card">
+
+<h5>
+
+Team Members
+
+</h5>
+
+<h2>
+
+{{ total_members }}
+
+</h2>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="row mt-4">
+
+<div class="col-md-4">
+
+<div class="card dashboard-card">
+
+<h5>
+
+Completed Tasks
+
+</h5>
+
+<h2 class="text-success">
+
+{{ completed_tasks }}
+
+</h2>
+
+</div>
+
+</div>
+
+<div class="col-md-4">
+
+<div class="card dashboard-card">
+
+<h5>
+
+Pending Tasks
+
+</h5>
+
+<h2 class="text-warning">
+
+{{ pending_tasks }}
+
+</h2>
+
+</div>
+
+</div>
+
+<div class="col-md-4">
+
+<div class="card dashboard-card">
+
+<h5>
+
+Meetings
+
+</h5>
+
+<h2 class="text-primary">
+
+{{ total_meetings }}
+
+</h2>
+
+</div>
+
+</div>
+
+</div>
+
+{% endblock %}

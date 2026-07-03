@@ -1,0 +1,162 @@
+{% extends 'base/business_base.html' %}
+
+{% block content %}
+
+<h1 class="mb-4">
+
+Reports
+
+</h1>
+
+<div class="row">
+
+<div class="col-md-4">
+
+<div class="dashboard-card">
+
+<h5>
+
+Total Projects
+
+</h5>
+
+<h2>
+
+{{ total_projects }}
+
+</h2>
+
+</div>
+
+</div>
+
+<div class="col-md-4">
+
+<div class="dashboard-card">
+
+<h5>
+
+Total Team Members
+
+</h5>
+
+<h2>
+{{ total_teams }}
+
+</h2>
+
+</div>
+
+</div>
+
+<div class="col-md-4">
+
+<div class="dashboard-card">
+
+<h5>
+
+Total Tasks
+
+</h5>
+
+<h2>
+
+{{ total_tasks }}  
+
+</h2>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="card p-4 mt-4">
+
+<h3 class="mb-4">
+
+Monthly Report
+
+</h3>
+
+<table class="table table-hover">
+
+<thead>
+
+<tr>
+
+<th>
+
+Department
+
+</th>
+
+<th>
+
+Completed Tasks
+
+</th>
+
+<th>
+
+Performance
+
+</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>
+
+Development
+
+</td>
+
+<td>
+
+120
+
+</td>
+
+<td>
+
+Excellent
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+Design
+
+</td>
+
+<td>
+
+80
+
+</td>
+
+<td>
+
+Good
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+{% endblock %}

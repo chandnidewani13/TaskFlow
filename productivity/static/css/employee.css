@@ -1,0 +1,151 @@
+body {
+
+margin: 0;
+
+padding: 0;
+
+font-family: Arial, sans-serif;
+
+background: #f4f7fc;
+}
+
+
+.sidebar {
+
+position: fixed;
+
+width: 260px;
+
+height: 100vh;
+
+background: linear-gradient(
+
+180deg,
+
+#ff9966,
+
+#ff5e62
+);
+
+padding-top: 30px;
+
+overflow-y: auto;
+}
+
+
+.logo {
+
+color: white;
+
+text-align: center;
+
+font-size: 32px;
+
+margin-bottom: 40px;
+}
+
+
+.sidebar ul {
+
+list-style: none;
+
+padding: 0;
+}
+
+
+.sidebar ul li {
+
+padding: 15px 25px;
+
+transition: 0.3s;
+}
+
+
+.sidebar ul li:hover {
+
+background: rgba(255,255,255,0.15);
+}
+
+
+.sidebar ul li a {
+
+color: white;
+
+text-decoration: none;
+
+font-size: 17px;
+
+display: block;
+}
+
+
+.main-content {
+
+margin-left: 260px;
+
+padding: 30px;
+}
+
+
+.topbar {
+
+background: white;
+
+padding: 20px;
+
+border-radius: 15px;
+
+box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+
+margin-bottom: 30px;
+}
+
+
+.dashboard-card {
+
+padding: 30px;
+
+border-radius: 20px;
+
+background: white;
+
+box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+
+text-align: center;
+
+transition: 0.3s;
+
+margin-bottom: 20px;
+}
+
+
+.dashboard-card:hover {
+
+transform: translateY(-5px);
+}
+
+
+.dashboard-card h5 {
+
+font-size: 20px;
+
+margin-bottom: 15px;
+}
+
+
+.dashboard-card h2 {
+
+font-size: 42px;
+
+color: #ff5e62;
+}
+
+
+.card {
+
+border: none;
+
+border-radius: 20px;
+
+box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
